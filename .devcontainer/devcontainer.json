@@ -3,5 +3,17 @@
 	"image": "mcr.microsoft.com/devcontainers/base:noble",
 	"features": {
 		"ghcr.io/jsburckhardt/devcontainer-features/uv:1": {}
-	}
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"charliermarsh.ruff",
+				"eamodio.gitlens",
+				"ms-python.python",
+				"ms-python.vscode-pylance",
+				"tamasfe.even-better-toml"
+			]
+		}
+	},
+	"postCreateCommand": "./hooks/install_hooks.sh && uv sync"
 }
