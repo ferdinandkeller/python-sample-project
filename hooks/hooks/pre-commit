@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# run linter : if return code is not 0, exit, else continue
+uvx ruff check --fix
+error_code="$?"
+if [ "$error_code" -ne 0 ]; then exit "$error_code"; fi
+
+# run formatter : if return code is not 0, exit, else continue
+uvx ruff format
+error_code="$?"
+if [ "$error_code" -ne 0 ]; then exit "$error_code"; fi
