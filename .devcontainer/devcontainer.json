@@ -1,0 +1,7 @@
+{
+	"name": "Python Sample Project",
+	"image": "mcr.microsoft.com/devcontainers/base:noble",
+	"features": {
+		"ghcr.io/jsburckhardt/devcontainer-features/uv:1": {}
+	}
+}
